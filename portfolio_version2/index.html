@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Version 2: My Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<!-- <style>
+* {
+    box-sizing: border-box;
+  } 
+</style> -->
+
+<h3 class="header" >My Website</h3>
+
+<button type="button" class="collapsible">...</button>
+<div class="content">
+  <img class="image" style="width:20%; height: 20%; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);" src="leMe.jpg"></img>
+  <p style="text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Heyo, I bims, die Jules</p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h2>Lunar Lander</h2>
+    <img style="width: 95%; height: 55%;" src="gameplay.jpg"></img>
+    <p><a href="lunarLander.html">Als eines der ersten Coding Projekte habe ich ein Spiel auf dem Prinzip des Lunar Landers gebaut. Parke das Ufo deines Aliens sicher und langsam...</a></p>
+  </div>
+  <div class="column">
+    <h2>Design-Projekt:Korrektive</h2>
+    <img style="width: 95%; height: 55%;" src="Korrektive.JPG"></img>
+    <p><a href="projekt2.html">Zwischenmenschliches Geben und Nehmen wird geübt: Korrektive - die korrekte Kollektive, eine Nachbarschaftsapp, welche...</a></p>
+  </div>
+  <div class="column">
+    <h2>Sushi-Tetris</h2>
+    <img style="width: 95%; height: 55%;" src="sushi.png"></img>
+    <p><a href="projekt3.html">Mein Abschlussprojekt: fülle die Zeilen mit Sushi-Zutaten und baue so deine eignen Maki-Rollen. Aber pass auf, denn...</a></p>
+  </div>
+</div>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+  
+
+</body>
+</html>

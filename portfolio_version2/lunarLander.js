@@ -9,11 +9,9 @@ var size = 1;
 gameStart = false;
 gameLive = false;
 
+
 function draw() {
   keyPressed(); //STEUERUNG!!!!!!!!
-  console.log(gravity - thrust);
-  console.log(speed);
-  console.log(windowHeight);
   if (gameStart === false && gameLive === false) {
     //Startbildschirm
     background(0);
@@ -26,20 +24,30 @@ function draw() {
     alien(xUfo, yUfo + speed);
   }
   result();
+  console.log('gravity - thrust: ' + (gravity - thrust));
+  console.log('speed:'+ speed);
+  //console.log(windowHeight);
 }
 
 function mousePressed() {
   if (mouseX >= 200 && mouseX <= 310 && mouseY >= 170 && mouseY <= 215) {
+    //Startbutton
     clear();
     gameStart = true;
+    gameLive = true;
     speed = 0;
     gravity = 0;
     thrust = 0;
   }
   if (mouseX >= 420 && mouseX <= 490 && mouseY >= 20 && mouseY <= 50) {
     clear();
-    gameStart = false;
-    gameLive = false;
+    /*gameStart = false;
+    gameLive = false;*/
+    gameLive = true;
+    speed = 0;
+    gravity = 0;
+    thrust = 0;
+
   }
 }
 
@@ -47,10 +55,10 @@ function mousePressed() {
 function level1() {
   //LV 1
   background("orange");
-
+  text('speed: ' + (gravity-thrust),10,20);
   noStroke();
   fill("#855A10");
-  rect(x, windowHeight - 50, 1000, 500); //boden
+  rect(x, windowHeight - 50, windowWidth, 500); //boden
   bergetriangle("#855A10", x + 10, windowHeight - 190, 1.7);
   bergetriangle("#855A10", x + 40, windowHeight - 190, 1.1);
   bergetriangle("#855A10", x + 170, windowHeight - 140, 0.7);
@@ -63,46 +71,45 @@ function level1() {
   button(x + 420, y + 20, 70, 30, "restart"); //restartButton
 }
 
+
+
+
+
+
 function result() {
   if (
-    gravity - thrust <= 0.5 &&
+    gravity - thrust <= 2 &&
     gravity - thrust >= 0 &&
     yUfo + speed >= windowHeight - 50
   ) {
-    //gameStart = false;
-    fill(0);
+    gameLive = false;
+    fill(255);
     textSize(20);
     text("The alien parked its flying car right", 40, 125);
   }
-  if (gravity - thrust >= 0.5 && yUfo + speed >= windowHeight - 50) {
-    gameStart = false;
+  if (gravity - thrust >= 2 && yUfo + speed >= windowHeight - 50) {
+    gameLive = false;
+    //gravity=0;
   }
 }
 
+
 //STEUERUNG
 function keyPressed() {
-  if (gameStart === true) {
+  if (gameLive === true) {
     speed += gravity - thrust;
+    gravity += 0.015;
   }
-  if (keyIsDown(16)) {
-    //restart im Level (shift)
-    gameStart = true;
-    speed = 0;
-    gravity = 0;
-    thrust = 0;
-  }
-  if (keyIsDown(32) && gameStart === true) {
+  if (keyIsDown(32) && gameLive === true) {
     //space
     thrust += 0.04;
   }
-  if (keyIsDown(37) && gameStart === true) {
+  if (keyIsDown(37) && gameLive === true) {
     xUfo -= 4;
   }
-  if (keyIsDown(39) && gameStart === true) {
+  if (keyIsDown(39) && gameLive === true) {
     xUfo += 4;
-  } else {
-    gravity += 0.015;
-  }
+  } 
 }
 
 // function für Details

@@ -1,0 +1,116 @@
+body {
+  background-color: whitesmoke;
+  background-image: url("gifStars.gif");
+  background-size: cover;
+  
+}
+
+nav {
+  list-style-type: none;
+  margin: 100;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(99, 110, 172, 0.918);
+}
+
+hr{
+  color: whitesmoke;
+}
+
+p {
+  color: whitesmoke;
+  font-family: 'Century Gothic';
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 3em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  color: whitesmoke;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li {
+  float: left;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.section-centered {
+  text-align: center;
+}
+
+
+li a {
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+}
+
+li a:hover {
+  background-color: black;
+}
+
+.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.home {
+  background-color: rgb(238, 192, 94);
+  color: whitesmoke;
+}
+
+.column {
+  float: left;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side,
+  .column.middle {
+    width: 100%;
+  }
+}
+
+img {
+  width: 50%;
+  align-self: center;
+}
+
+iframe {
+  height: 623.333px;
+  width: 623.333px;
+  overflow: hidden;
+}
+
+#defaultCanvas1{
+  display: none;
+}
+
+/* #defaultCanvas0{
+  width: 100% !important;
+  height: 100% !important;
+}    */
