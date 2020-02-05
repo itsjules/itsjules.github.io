@@ -1,97 +1,41 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-  <title>Tetris Game DEMO</title>
-  <style>
-    #score {
-      display: inline-block;
-    }
-
-    #level{
-      display:inline-block;
-    }
-
-    .canvas1 {
-      display: block;
-      float: right;
-      margin-right: 3%;
-      border-radius: 10px;
-      /* border-style: dotted;
-      border-width: 3px; */
-    }
-
-    .canvas2 {
-      display: block;
-      border-radius: 10px;
-    }
-
-    body {
-      font-family: 'Courier New', Courier, monospace;
-      color: rgb(255, 242, 231);
-      background-image: url("img/background_sushi.jpg");
-      background-size: cover;
-      min-width: 500px;
-    }
-
-    .column {
-      float: left;
-      position: relative;
-      margin-top: 3%;
-      
-    }
-
-    .row {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 3.3fr 2.7fr;
-      grid-gap: 1%;
-    }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-  </style>
-</head>
-
+  <head>
+    <title>Jules Projekte</title>
+  </head>
+  <header>
+    <nav>
+      <li>
+        <a class="home" href="JulesWebsite.html">START</a>
+      </li>
+      <li>
+        <a href="lunarLander.html">LUNAR LANDER</a>
+      </li>
+      <li>
+        <a href="projekt2.html">PROJEKT 2</a>
+      </li>
+      <li>
+        <a href="projekt3.html">PROJEKT 3</a>
+      </li>
+    </nav>
+    <link rel="stylesheet" type="text/css" href="portfolio.css" />
+  </header>
 <body>
-  <h2 style="margin-top:3%; margin-bottom: 0px; text-align:center; font-size: 50px; text-decoration: underline dotted;">
-    Tetris DEMO
-  </h2>
-  <div class="row">
-    <div class="column">
-      <img style="position: absolute;right: 3%; border-radius: 10px;" id="vignette" src="img/vignette.png" width="220" height="440">
-      <canvas class="canvas1" id="tetris" width="220" height="440"></canvas>
-      
-    </div>
-    <div class="column">
-      <canvas class="canvas2" id="next" width="132" height="88"></canvas>
-      <div style="margin-top: 15px; font-size: 20px; font-weight: bolder;">
-        Score :
-        <div id="score">0</div>
+      <div class="column">
+        <div class="column.side">
+          <p>
+            <a
+              >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+              erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+              Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+              sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+              et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+              accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+              no sea takimata sanctus est Lorem ipsum dolor sit amet.</a
+            >
+          </p>
       </div>
-      <div style="margin-top: 15px; font-size: 20px; font-weight: bolder;">
-        Level :
-        <div id="level">1</div>
-      </div>
-    </div>
-  </div>
-  <!-- pictures -->
-  <div style="display:none;">
-    <img id="salmon" src="img/salmon.png" width="22" height="22">
-    <img id="rice" src="img/rice.png" width="22" height="22">
-    <img id="avocado" src="img/avocado.png" width="22" height="22">
-    <img id="nori" src="img/nori.png" width="22" height="22">
-    <img id="ikura" src="img/ikura.png" width="22" height="22">
-    <img id="tuna" src="img/tuna.png" width="22" height="22">
-    <img id="tamago" src="img/tamago.png" width="22" height="22">
-    <img id="cucumber" src="img/cucumber.png" width="22" height="22">
-  </div>
-
-  <script src="tetrominoes.js"></script>
-  <script src="tetrisFULL_imgV2.js"></script>
-  
-</body>
-
+</body>  
 </html>
